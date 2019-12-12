@@ -1,0 +1,24 @@
+Package: onc
+Title: Oceans 2.0 Client Library
+Version: 2.0
+Authors@R: as.person(c(
+            "Dany Cabrera <dcabrera@oceannetworks.ca> [aut, cre]",
+            "Allan Rempel <agrempel@uvic.ca> [ctb]",
+            "Ryan Ross <ryanross@uvic.ca> [ctb]"))
+Description: The ONC R client library provides functionality that facilitates access to Ocean Networks Canada's data, through the Oceans 2.0 API.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Depends: R (>= 3.1.0),
+         methods
+Imports: anytime,
+         httr,
+         humanize,
+         lubridate,
+         stringi,
+         tictoc,
+         utils
+LazyData: true
+Suggests: testthat,
+          crayon
+URL: https://wiki.oceannetworks.ca/display/O2A/R+Client+Library
+RoxygenNote: 7.0.2
