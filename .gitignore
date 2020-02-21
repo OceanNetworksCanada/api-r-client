@@ -4,6 +4,8 @@ output/
 */output
 tests/user-code
 .vscode
+man
+man/*
 
 # History files
 .Rhistory
