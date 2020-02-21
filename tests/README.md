@@ -59,5 +59,6 @@ Test cases are written exactly as described at the [Automated user test document
 
 **ACKNOWLEDGEMENTS**
 
-Initial author: dcabrera@uvic.ca
 Maintainers: 
+Original author: Dany Alejandro Cabrera Vargas <dcabrera@oceannetworks.ca>
+

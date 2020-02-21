@@ -4,7 +4,7 @@
 #'
 #' Provides convenient & easy access to Ocean Networks Canada's data.
 #' For detailed information and usage examples, visit our
-#' \href{https://wiki.oceannetworks.ca/display/O2A/R+Client+Library}{official Documentation}.
+#' \href{https://wiki.oceannetworks.ca/display/O2A/Client+Libraries}{official Documentation}.
 #'
 #' @field token character. User token
 #' @field showInfo logical. Print verbose debug comments

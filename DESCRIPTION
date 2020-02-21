@@ -1,24 +1,27 @@
-Package: onc
-Title: Oceans 2.0 Client Library
-Version: 2.0
-Authors@R: as.person(c(
-            "Dany Cabrera <dcabrera@oceannetworks.ca> [aut, cre]",
-            "Allan Rempel <agrempel@uvic.ca> [ctb]",
-            "Ryan Ross <ryanross@uvic.ca> [ctb]"))
-Description: The ONC R client library provides functionality that facilitates access to Ocean Networks Canada's data, through the Oceans 2.0 API.
-License: MIT + file LICENSE
-Encoding: UTF-8
-Depends: R (>= 3.1.0),
-         methods
-Imports: anytime,
-         httr,
-         humanize,
-         lubridate,
-         stringi,
-         tictoc,
-         utils
-LazyData: true
-Suggests: testthat,
-          crayon
-URL: https://wiki.oceannetworks.ca/display/O2A/R+Client+Library
+Package:     onc
+Title:       Oceans 2.0 Client Library
+Description: Allows users to discover and retrieve Ocean Networks Canada's 12+ years of oceanographic data in raw, text, image, audio, video or any other format available. Provides a class that wraps web service calls and business logic so that users can download data with a single line of code. Find full documentation at: <https://wiki.oceannetworks.ca/display/O2A/Client+Libraries>.
+Version:     2.0
+Authors@R:   c(person("Dany Cabrera", "Developer", role = c("aut", "cre"), email = "data@oceannetworks.ca"),
+               person("Allan Rempel", "Developer", role = "ctb"),
+               person("Ryan Ross", "Developer", role = "ctb"))
+Author:      Dany Cabrera [aut, cre],
+             Allan Rempel [ctb],
+             Ryan Ross [ctb]
+Maintainer:  Dany Cabrera <data@oceannetworks.ca>
+License:     MIT + file LICENSE
+Encoding:    UTF-8
+Depends:     R (>= 3.1.0),
+             methods
+Imports:     anytime,
+             httr,
+             humanize,
+             lubridate,
+             stringi,
+             tictoc,
+             utils
+LazyData:    true
+Suggests:    testthat,
+             crayon
+URL:         https://wiki.oceannetworks.ca/display/O2A/Client+Libraries
 RoxygenNote: 7.0.2

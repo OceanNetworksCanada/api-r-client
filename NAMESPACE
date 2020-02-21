@@ -3,7 +3,7 @@ exportClasses(Onc)
 
 importFrom("methods", "setRefClass")
 importFrom("methods", "new")
- importFrom("utils", "str", "tail")
+importFrom("utils",   "str", "tail")
 
 importFrom("stringi", "stri_isempty")
 importFrom("stringi", "stri_length")

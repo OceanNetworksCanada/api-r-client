@@ -3,6 +3,7 @@ output
 output/
 */output
 tests/user-code
+.vscode
 
 # History files
 .Rhistory
