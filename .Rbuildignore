@@ -9,3 +9,4 @@ output$
 ^CONTRIBUTING\.md$
 ^tests/runtests\.R$
 ^tests/user-code$
+^.vscode$
