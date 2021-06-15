@@ -4,11 +4,13 @@ Description: Allows users to discover and retrieve Ocean Networks Canada's 12+ y
 Version:     2.0
 Authors@R:   c(person("Dany", "Cabrera", role = c("aut", "cre"), email = "data@oceannetworks.ca"),
                person("Allan", "Rempel", role = "ctb"),
-               person("Ryan", "Ross", role = "ctb"))
+               person("Ryan", "Ross", role = "ctb")),
+               person("Bennit", "Mueller", role = "ctb"))
 Author:      Dany Cabrera [aut, cre],
              Allan Rempel [ctb],
-             Ryan Ross [ctb]
-Maintainer:  Dany Cabrera <data@oceannetworks.ca>
+             Ryan Ross [ctb],
+             Bennit Mueller [ctb]
+Maintainer:  Bennit Mueller <data@oceannetworks.ca>
 License:     MIT + file LICENSE
 Encoding:    UTF-8
 Depends:     R (>= 3.1.0),
