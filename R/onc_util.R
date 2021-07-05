@@ -26,7 +26,7 @@
 #' @return (numeric) Result code from {0: done, -1: error, -2: fileExists}
 .saveAsFile = function(response, filePath = "", fileName = "", overwrite = FALSE) {
     fullPath <- fileName
-    if (stri_length(filePath) > 0) {
+    if (stringi::stri_length(filePath) > 0) {
         fullPath <- sprintf("%s/%s", filePath, fileName)
         # Create outPath directory if not exists
         if (.prepareDirectory(filePath) == FALSE) {
@@ -38,7 +38,7 @@
     # Save file in outPath if it doesn"t exist yet
     if (overwrite || !file.exists(fullPath)) {
         tryCatch({
-            writeBin(content(response, as = "raw"), fullPath)
+            writeBin(httr::content(response, as = "raw"), fullPath)
         },
         error = function(c) {
             return(-1)
@@ -63,11 +63,11 @@
 #' @return (character) Date string
 .formatUtc = function(self, dateString = "now") {
     if (dateString == "now") {
-        dateNow <- now("UTC")
+        dateNow <- lubridate::now("UTC")
         return(format(dateNow, format = "%Y-%m-%dT%H:%M:%S.000Z"))
     }
     else {
-        dateObj <- anytime(dateString)
+        dateObj <- anytime::anytime(dateString)
         return(format(dateObj, format = "%Y-%m-%dT%H:%M:%S.000Z"))
     }
 }
@@ -119,7 +119,7 @@
     status <- response$status_code
     if (status == 400) {
         cat(sprintf("\nERROR 400 - Bad Request:\n  %s\n", response$url))
-        payload <- content(response, as = "parsed")
+        payload <- httr::content(response, as = "parsed")
         if ("errors" %in% names(payload)) {
             for (e in payload$errors) {
                 msg = e$errorMessage
@@ -245,7 +245,7 @@
         txtDownTime <- sprintf('%.3f seconds', secs)
     }
     else {
-        txtDownTime <- sprintf("%s", dseconds(secs))
+        txtDownTime <- sprintf("%s", lubridate::dseconds(secs))
     }
     return(txtDownTime)
 }
@@ -256,7 +256,7 @@
 #' @param size (float) Size in bytes
 #' @return (character) a readable string for this file size
 .formatSize = function(size = 0) {
-    return(natural_size(size))
+    return(humanize::natural_size(size))
 }
 
 #' Prints message to console only when showInfo is true
@@ -310,5 +310,5 @@
     for (name in names(params)) {
         query <- sprintf("%s%s=%s&", query, name, params[[name]])
     }
-    return(stri_sub(query, 1, -2))
+    return(stringi::stri_sub(query, 1, -2))
 }

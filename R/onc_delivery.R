@@ -87,7 +87,7 @@
     filters   <- list("method" = "run", "token" = self$token, "dpRequestId" = dpRequestId)
 
     # run timed run request
-    tic()
+    tictoc::tic()
     status = 202
     while (status == 202) {
         r = .doRequest(self, url, filters, "getInfo" = TRUE)
@@ -105,7 +105,7 @@
             status = 200
         }
     }
-    t <- toc(quiet = TRUE)
+    t <- tictoc::toc(quiet = TRUE)
     
     if (.respFailed(r)) return(r)
 
@@ -256,7 +256,7 @@
     n <- 0
 
     while ((status == 200) || (status == 202)) {
-        response <- HEAD(url, config(timeout = self$timeout), query = filters)
+        response <- httr::HEAD(url, httr::config(timeout = self$timeout), query = filters)
         status   <- response$status_code
         if (status == 200) {
             # count successful HEAD request
@@ -286,7 +286,7 @@
     # not the case with archived data products)
     if ("estimatedProcessingTime" %in% names(response)) {
         txtEstimated <- response$estimatedProcessingTime
-        parts <- unlist(stri_split_fixed(txtEstimated, " "))
+        parts <- unlist(stringi::stri_split_fixed(txtEstimated, " "))
         if (length(parts) == 2) {
             unit <- parts[[2]]
             factor <- 1

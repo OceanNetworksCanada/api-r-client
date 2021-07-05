@@ -246,7 +246,7 @@
     }
 
     extension <- sprintf(".%s", extension) # match the dot to avoid matching substrings
-    n <- stri_length(extension)
+    n <- stringi::stri_length(extension)
     filtered <- list() # appending is faster than deleting
 
     # determine the row structure
@@ -260,12 +260,12 @@
     # filter
     for (file in results$files) {
         if (rowFormat == "filename") {
-            fileExt <- stri_sub(file, from = -n)
+            fileExt <- stringi::stri_sub(file, from = -n)
 
             if (fileExt == extension) filtered <- append(filtered, file)
         }
         else {
-            fileExt <- stri_sub(file$filename, from = -n)
+            fileExt <- stringi::stri_sub(file$filename, from = -n)
 
             if (fileExt == extension) filtered <- .appendList(filtered, file)
         }

@@ -72,9 +72,9 @@ DataProductFile <- setRefClass("DataProductFile",
                 if (.self$.showInfo) {
                     cat(sprintf("Requesting URL:\n   %s\n", .filters2url(.self$baseUrl, .self$.filters)))
                 }
-                tic()
+                tictoc::tic()
                 response <- GET(.self$.baseUrl, config = list(timeout = timeout), query = .self$.filters)
-                t <- toc(quiet = TRUE)
+                t <- tictoc::toc(quiet = TRUE)
                 duration <- round(t$toc - t$tic, digits = 3)
 
                 .self$.downloadUrl <- response$url
@@ -142,7 +142,7 @@ DataProductFile <- setRefClass("DataProductFile",
         extractNameFromHeader = function(response) {
             head <- headers(response)
             txt <- head[["Content-Disposition"]]
-            filename <- unlist(stri_split_fixed(txt, "filename="))[[2]]
+            filename <- unlist(stringi::stri_split_fixed(txt, "filename="))[[2]]
             return(filename)
         },
 
