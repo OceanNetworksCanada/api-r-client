@@ -11,5 +11,5 @@ For complete documentation and examples, visit https://wiki.oceannetworks.ca/dis
 
 ## Maintainers
 
-* Developer / Maintainer: [Angla Schlesinger](schlesin@uvic.ca)
-* Previous developers: [Allan Rempel](agrempel@uvic.ca), [Ryan Ross](ryanross@uvic.ca); [Dany Alejandro Cabrera Vargas](data@oceannetworks.ca)
+* Maintainer: [Bennit Mueller](data@oceannetworks.ca)
+* Previous developers: [Allan Rempel](agrempel@uvic.ca), [Ryan Ross](ryanross@uvic.ca),[Dany Alejandro Cabrera Vargas](otello2040@gmail.com)
