@@ -19,21 +19,21 @@
     }
 
     # Do request
-    tic("doRequest")
+    tictoc::tic("doRequest")
     tryCatch({
-        response <- GET(url, config = list(timeout = self$timeout), query = filters)
+        response <- httr::GET(url, config = list(timeout = self$timeout), query = filters)
         status <- response$status_code
     }, error = function(err) {
         stop(err$message)
     })
-    t <- toc(quiet = TRUE)
+    t <- tictoc::toc(quiet = TRUE)
     duration <- round(as.numeric(t$toc - t$tic), digits = 3)
     .log(self, sprintf("   Web Service response time: %s", .formatDuration(duration)))
 
-    if (http_error(response)) {
+    if (httr::http_error(response)) {
         if (status == 400) {
             .printErrorMessage(response)
-            return(content(response, as = "parsed"))
+            return(httr::content(response, as = "parsed"))
         }
         else if (status == 401) {
             stop("ERROR 401: Unauthorized. Please verify your user token")
@@ -43,12 +43,12 @@
                        "visit data.oceannetworks.ca for more information."))
         }
         else {
-            stop(as.character(http_status(response)$message))
+            stop(as.character(httr::http_status(response)$message))
         }
     }
 
     if (rawResponse) r <- response
-    else r <- content(response, as = "parsed")
+    else r <- httr::content(response, as = "parsed")
 
     if (getInfo) return(list("response" = r, "duration" = duration, "status" = status))
     else return(r)

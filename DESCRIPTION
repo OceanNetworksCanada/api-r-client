@@ -1,29 +1,24 @@
-Package:     onc
-Title:       Oceans 2.0 Client Library
-Description: Allows users to discover and retrieve Ocean Networks Canada's 12+ years of oceanographic data in raw, text, image, audio, video or any other format available. Provides a class that wraps web service calls and business logic so that users can download data with a single line of code. Find full documentation at: <https://wiki.oceannetworks.ca/display/O2A/Client+Libraries>.
-Version:     2.0
+ 
+Package: onc.api
+Title:  Oceans 2.0 API Client Library
+Description: Allows users to discover and retrieve Ocean Networks Canada's oceanographic data in raw, text, image, audio, video or any other format available. Provides a class that wraps web service calls and business logic so that users can download data with a single line of code.
+Version: 2.0.1.0
 Authors@R:   c(person("Dany", "Cabrera", role = c("aut", "cre"), email = "data@oceannetworks.ca"),
                person("Allan", "Rempel", role = "ctb"),
-               person("Ryan", "Ross", role = "ctb")),
+               person("Ryan", "Ross", role = "ctb"),
                person("Bennit", "Mueller", role = "ctb"))
-Author:      Dany Cabrera [aut, cre],
-             Allan Rempel [ctb],
-             Ryan Ross [ctb],
-             Bennit Mueller [ctb]
 Maintainer:  Bennit Mueller <data@oceannetworks.ca>
-License:     MIT + file LICENSE
-Encoding:    UTF-8
-Depends:     R (>= 3.1.0),
-             methods
+URL:         https://wiki.oceannetworks.ca/display/O2A/Client+Libraries
+License: MIT + file LICENSE
 Imports:     anytime,
              httr,
              humanize,
              lubridate,
              stringi,
              tictoc,
-             utils
-LazyData:    true
-Suggests:    testthat,
-             crayon
-URL:         https://wiki.oceannetworks.ca/display/O2A/Client+Libraries
-RoxygenNote: 7.0.2
+             utils,
+             methods
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1

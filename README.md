@@ -1,4 +1,4 @@
-# ONC API R Client Library
+# ONC Oceans2.0 API R Client Library
 
 This library facilitates access to scientific data hosted by [Ocean Networks Canada](https://oceannetworks.ca) through the
 [Oceans 2.0 API](https://wiki.oceannetworks.ca/display/O2A/Oceans+2.0+API+Home) public web services.
@@ -11,5 +11,5 @@ For complete documentation and examples, visit https://wiki.oceannetworks.ca/dis
 
 ## Maintainers
 
-* Maintainer: [Bennit Mueller](data@oceannetworks.ca)
-* Previous developers: [Allan Rempel](agrempel@uvic.ca), [Ryan Ross](ryanross@uvic.ca),[Dany Alejandro Cabrera Vargas](otello2040@gmail.com)
+* Maintainer: [Bennit Mueller](mailto:data@oceannetworks.ca)
+* Previous developers: [Allan Rempel](mailto:agrempel@uvic.ca), [Ryan Ross](mailto:ryanross@uvic.ca),[Dany Alejandro Cabrera Vargas](mailto:otello2040@gmail.com)

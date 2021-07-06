@@ -4,7 +4,7 @@
 #'
 #' Provides convenient & easy access to Ocean Networks Canada's data.
 #' For detailed information and usage examples, visit our
-#' \href{https://wiki.oceannetworks.ca/display/O2A/Client+Libraries}{official Documentation}.
+#' \href{https://wiki.oceannetworks.ca/display/O2A/R+Client+Library}{official Documentation}.
 #'
 #' @field token character. User token
 #' @field showInfo logical. Print verbose debug comments
@@ -12,7 +12,6 @@
 #' @field baseUrl character. Base URL for API requests
 #' @field outPath character. Output path for downloaded files
 #'
-#' @exportClass Onc
 Onc <- setRefClass("Onc",
     fields = list(
         token    = "character",
@@ -32,7 +31,7 @@ Onc <- setRefClass("Onc",
         #' @param timeout      Number of seconds before a request to the API is canceled
         initialize = function(token = "", production = TRUE, showInfo = FALSE, outPath = "output", timeout = 60) {
             # basic parameter validation
-            stopifnot(is.character(token), (stri_length(token) > 32))
+            stopifnot(is.character(token), (stringi::stri_length(token) > 32))
             stopifnot(is.character(outPath))
             stopifnot(is.logical(production))
             stopifnot(is.logical(showInfo))
@@ -48,8 +47,8 @@ Onc <- setRefClass("Onc",
             if (!stri_isempty(path)) {
                 path <- stri_replace_all_fixed(path, "\\", "/")
             }
-            if (stri_sub(path,-1) == "/") {
-                path <- stri_sub(path, 1,-2)
+            if (stringi::stri_sub(path,-1) == "/") {
+                path <- stringi::stri_sub(path, 1,-2)
             }
             .self$outPath = path
 

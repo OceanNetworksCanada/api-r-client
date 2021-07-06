@@ -73,7 +73,7 @@ MultiPage <- setRefClass("MultiPage",
                     rNext <- r2$response[["next"]]
                 }
 
-                t <- toc(quiet = TRUE)
+                t <- tictoc::toc(quiet = TRUE)
                 duration  <- round(as.numeric(t$toc - t$tic), digits = 3)
                 rowCount  <- .self$.rowCount(response, service)
                 response[["next"]] <- list()
