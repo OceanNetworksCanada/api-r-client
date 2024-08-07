@@ -11,5 +11,5 @@ For complete documentation and examples, visit https://wiki.oceannetworks.ca/dis
 
 ## Maintainers
 
-* Maintainer: [Bennit Mueller](mailto:data@oceannetworks.ca)
+* Maintainer: ##IMPORTANT:## as of May 2024 this is no longer maintained by ONC and it cannot be guaranteed that the latest version will work with ONC's API
 * Previous developers: [Allan Rempel](mailto:agrempel@uvic.ca), [Ryan Ross](mailto:ryanross@uvic.ca),[Dany Alejandro Cabrera Vargas](mailto:otello2040@gmail.com)
